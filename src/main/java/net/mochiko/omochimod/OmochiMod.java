@@ -1,7 +1,6 @@
 package net.mochiko.omochimod;
 
 import net.minecraft.world.item.CreativeModeTabs;
-import net.mochiko.omochimod.block.ModBlocks;
 import net.mochiko.omochimod.item.Moditems;
 import org.slf4j.Logger;
 
