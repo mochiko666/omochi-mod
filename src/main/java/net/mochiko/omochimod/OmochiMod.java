@@ -1,8 +1,8 @@
 package net.mochiko.omochimod;
 
 import net.minecraft.world.item.CreativeModeTabs;
-import net.mochiko.omochimod.block.ModBlocks;
-import net.mochiko.omochimod.item.Moditems;
+import net.mochiko.omochimod.creativetab.ModCreativeModeTabs;
+import net.mochiko.omochimod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -26,6 +26,7 @@ public class OmochiMod {
     public static final Logger LOGGER = LogUtils.getLogger();
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
+
     public OmochiMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -35,10 +36,9 @@ public class OmochiMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        Moditems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+        ModItems.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -46,13 +46,7 @@ public class OmochiMod {
 
     private void commonSetup(FMLCommonSetupEvent event) {
     }
-
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(Moditems.OMOCHI);
-        }
-    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

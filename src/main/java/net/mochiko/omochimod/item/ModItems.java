@@ -6,7 +6,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class Moditems {
+public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(OmochiMod.MOD_ID);
 
     public static final DeferredItem<Item> OMOCHI = ITEMS.register("omochi",
