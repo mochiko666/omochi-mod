@@ -10,7 +10,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MortarBlock extends Block {
     public static final MapCodec<MortarBlock> CODEC = simpleCodec(MortarBlock::new);
-    public static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 14.0, 14.0, 14.0);
+    public static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 14.0, 15.0);
 
     public MortarBlock(Properties properties) {
         super(properties);
