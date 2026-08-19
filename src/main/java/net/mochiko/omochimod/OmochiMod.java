@@ -2,6 +2,7 @@ package net.mochiko.omochimod;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.mochiko.omochimod.creativetab.ModCreativeModeTabs;
+import net.mochiko.omochimod.block.ModBlocks;
 import net.mochiko.omochimod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -22,10 +23,10 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 public class OmochiMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "omochimod";
+    // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-
     public OmochiMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -38,6 +39,10 @@ public class OmochiMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        // Register the item to a creative tab
+        modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -45,7 +50,16 @@ public class OmochiMod {
 
     private void commonSetup(FMLCommonSetupEvent event) {
     }
+
     // Add the example block item to the building blocks tab
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.OMOCHI);
+        }
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModBlocks.STONE_MORTAR);
+        }
+    }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

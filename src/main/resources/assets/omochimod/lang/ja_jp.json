@@ -1,6 +1,9 @@
 {
-  "itemGroup.omochimod": "Omochi mod",
+  "creativetab.omochimod.omochi_items_tab": "Omochi mod",
+
   "item.omochimod.omochi": "おもち",
+
+  "block.omochimod.stone_mortar": "石のつき臼",
 
   "omochimod.configuration.title": "Omochi mod",
   "omochimod.configuration.section.omochimod.common.toml": "Omochi mod Configs",

@@ -1,6 +1,10 @@
 {
+  "creativetab.omochimod.omochi_items": "Omochi mod",
   "itemGroup.omochimod": "Omochi mod",
+
   "item.omochimod.omochi": "Omochi",
+
+  "block.omochimod.stone_mortar": "Stone mortar",
 
   "omochimod.configuration.title": "Omochi mod",
   "omochimod.configuration.section.omochimod.common.toml": "Omochi mod Configs",

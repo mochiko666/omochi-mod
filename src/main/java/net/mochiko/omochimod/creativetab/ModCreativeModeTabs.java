@@ -5,6 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.mochiko.omochimod.OmochiMod;
+import net.mochiko.omochimod.block.ModBlocks;
 import net.mochiko.omochimod.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -21,6 +22,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.omochimod.omochi_items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.OMOCHI);
+                        output.accept(ModBlocks.STONE_MORTAR);
                     })
                     .build());
 
