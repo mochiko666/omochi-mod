@@ -17,7 +17,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(OmochiMod.MOD_ID);
 
     public static final DeferredBlock<Block> STONE_MORTAR = registerBlock("stone_mortar",
-            () -> new MortarBlock(BlockBehaviour.Properties.of().noCollission()));
+            () -> new MortarBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
