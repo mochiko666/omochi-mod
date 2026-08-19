@@ -10,7 +10,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(OmochiMod.MOD_ID);
 
     public static final DeferredItem<Item> OMOCHI = ITEMS.register("omochi",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.OMOCHI)));
 
 
 
