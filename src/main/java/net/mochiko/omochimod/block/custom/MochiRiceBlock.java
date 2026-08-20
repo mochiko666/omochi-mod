@@ -1,4 +1,10 @@
 package net.mochiko.omochimod.block.custom;
 
-public class MochiRiceBlock extends cropblock {
+import net.minecraft.world.level.block.CropBlock;
+
+public class MochiRiceBlock extends CropBlock {
+
+    public MochiRiceBlock(Properties properties) {
+        super(properties);
+    }
 }
