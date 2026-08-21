@@ -5,6 +5,9 @@
 
   "block.omochimod.stone_mortar": "石のつき臼",
 
+  "item.omochimod.mochi_rice_seeds": "もち米の種",
+  "block.omochimod.mochi_rice_crop": "もち米の稲",
+
   "omochimod.configuration.title": "Omochi mod",
   "omochimod.configuration.section.omochimod.common.toml": "Omochi mod Configs",
   "omochimod.configuration.section.omochimod.common.toml.title": "Omochi mod Configs"

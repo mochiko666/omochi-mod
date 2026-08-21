@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "omochimod:item/mochi_rice_seeds"
+  }
+}

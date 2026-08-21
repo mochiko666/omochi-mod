@@ -3,8 +3,10 @@ package net.mochiko.omochimod.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.mochiko.omochimod.OmochiMod;
+import net.mochiko.omochimod.block.custom.MochiRiceBlock;
 import net.mochiko.omochimod.block.custom.MortarBlock;
 import net.mochiko.omochimod.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
@@ -18,6 +20,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> STONE_MORTAR = registerBlock("stone_mortar",
             () -> new MortarBlock(BlockBehaviour.Properties.of().noOcclusion()));
+    public static final DeferredBlock<Block> MOCHI_RICE_CROP = registerBlock("mochi_rice_crop",
+            () -> new MochiRiceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

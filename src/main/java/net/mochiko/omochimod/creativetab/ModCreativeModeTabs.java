@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.OMOCHI);
                         output.accept(ModBlocks.STONE_MORTAR);
+                        output.accept(ModItems.MOCHI_RICE_SEEDS);
                     })
                     .build());
 
