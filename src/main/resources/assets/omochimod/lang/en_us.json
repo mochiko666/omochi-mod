@@ -6,6 +6,9 @@
 
   "block.omochimod.stone_mortar": "Stone mortar",
 
+  "item.omochimod.mochi_rice_seeds": "Mochi Rice Seeds",
+  "block.omochimod.mochi_rice_crop": "Mochi Rice",
+
   "omochimod.configuration.title": "Omochi mod",
   "omochimod.configuration.section.omochimod.common.toml": "Omochi mod Configs",
   "omochimod.configuration.section.omochimod.common.toml.title": "Example Mod Configs"
